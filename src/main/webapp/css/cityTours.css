@@ -1,0 +1,256 @@
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Section */
+header {
+    background: url('../images/ls.jpeg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Overview Section */
+.overview {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.overview h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.overview p {
+    font-size: 1rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Popular Cities Section */
+.popular-cities {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.popular-cities h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+.city-grid {
+    display: flex;
+    flex-direction: row; /* Ensures horizontal layout */
+    justify-content: flex-start;
+    overflow-x: auto; /* Enables horizontal scrolling for overflow */
+    gap: 20px; /* Adds space between the city cards */
+    padding: 10px; /* Adds some padding for better visuals */
+}
+
+.city-grid::-webkit-scrollbar {
+    height: 10px; /* Custom scrollbar height */
+}
+
+.city-grid::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.city-grid::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* Card Styles */
+.city-card {
+    flex: 0 0 auto; /* Ensures the cards don't shrink or grow */
+    width: 300px; /* Maintains a consistent width */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.city-card:hover {
+    transform: scale(1.05);
+}
+
+.city-card img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover; /* Ensures the image fits within the card */
+}
+
+.city-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 15px 0 10px;
+}
+
+.city-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Button Styles */
+.btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007BFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Call to Action Section */
+.call-to-action {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.call-to-action h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.btn-main {
+    text-decoration: none;
+    color: #fff;
+    background-color: #28a745;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-main:hover {
+    background-color: #218838;
+}
+/* Call to Action Section */
+.call-to-action {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Styling for the Book a Tour Now Button */
+#book-tour-btn {
+    background-color: #007bff;
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#book-tour-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Booking Form Styles */
+#booking-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: none; /* Hidden by default */
+}
+
+#booking-form .form-group {
+    margin-bottom: 20px;
+}
+
+#booking-form label {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+#booking-form .form-control {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+#booking-form .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+#booking-form button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#booking-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .cta-content {
+        padding: 20px;
+    }
+    
+    #booking-form {
+        padding: 20px;
+    }
+
+    #book-tour-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+

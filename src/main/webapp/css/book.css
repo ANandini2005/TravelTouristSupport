@@ -1,0 +1,176 @@
+/* General reset for page elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Container styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Page 1 - Booking Form page background */
+.booking-page {
+    background-color: #f0f8ff;  /* Light blue */
+}
+
+.booking-page h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* Page 1 - Form styling */
+.booking-page .form-group {
+    margin-bottom: 20px;
+}
+
+.booking-page label {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 8px;
+}
+
+.booking-page input[type="text"],
+.booking-page input[type="number"],
+.booking-page input[type="date"],
+.booking-page select,
+.booking-page textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.booking-page input[type="text"]:focus,
+.booking-page input[type="number"]:focus,
+.booking-page input[type="date"]:focus,
+.booking-page select:focus,
+.booking-page textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.booking-page button[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.booking-page button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+.booking-page .alert-danger {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Page 2 - Booking Confirmation page background */
+.confirmation-page {
+    background-color: #fafad2;  /* Light goldenrod yellow */
+}
+
+.confirmation-page h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.confirmation-page p {
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.confirmation-page ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+    color: #34495e;
+}
+
+.confirmation-page ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.confirmation-page .btn-primary {
+    background-color: #e67e22;  /* Orange */
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.confirmation-page .btn-primary:hover {
+    background-color: #d35400;  /* Darker orange */
+}
+
+/* Styling for both pages */
+h2 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Common button styles */
+button, .btn-primary {
+    font-size: 1rem;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+
+/* Shared form styling */
+input[type="text"], input[type="number"], input[type="date"], select, textarea {
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 4px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Container hover effect */
+.container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Adjustments for small screens (responsive design) */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+}

@@ -1,0 +1,50 @@
+/* Apply flex layout to body */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Allow main content to grow and push footer to the bottom */
+.container {
+    flex: 1;
+}
+
+/* Footer styling */
+footer {
+    background-color: #007bff; /* Adjust as needed */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Customize arrow color */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: #0000a0; /* Change to your desired color */
+    }
+
+    /* Adjust arrow position */
+    .carousel-control-prev.custom-control {
+        left: -60px; /* Move to the left */
+    }
+    .carousel-control-next.custom-control {
+        right: -70px; /* Move to the right */
+    }
+
+    /* Additional adjustments for better appearance */
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 5%; /* Adjust the width of the control area */
+    }
+    
+    /* Set a fixed size for all images in the carousel */
+.card-img-top {
+    width: 100%; /* Ensures the image fills the card width */
+    height: 200px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Crops the image to fit without distortion */
+}
+    

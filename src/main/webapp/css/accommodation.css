@@ -1,0 +1,167 @@
+@charset "UTF-8";
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #00ffff;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1600x900/?vacation,hotel');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 80px 20px;
+    color: white;
+}
+
+.hero-section h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Accommodation Section */
+.accommodation-section {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.accommodation-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #222;
+}
+
+.accommodation-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.accommodation-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.accommodation-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-header {
+    margin-bottom: 20px;
+}
+
+.card-header h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0056b3;
+}
+
+.card-header .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff4500;
+}
+
+.card-body .description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.accommodation-card .amenities {
+    text-align: left;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.accommodation-card .amenities li {
+    margin-bottom: 10px;
+}
+
+.accommodation-card .amenities i {
+    color: #0056b3;
+    margin-right: 10px;
+}
+
+.btn-book {
+    background-color: #0056b3;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-book:hover {
+    background-color: #003d82;
+}
+
+/* Footer */
+.footer {
+    background-color: #0000ff;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.footer p {
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .accommodation-cards {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .hero-section h1 {
+        font-size: 35px;
+    }
+
+    .hero-section p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .accommodation-card {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .hero-section h1 {
+        font-size: 28px;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+    }
+}
+

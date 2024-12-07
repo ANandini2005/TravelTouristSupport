@@ -1,0 +1,104 @@
+/* Enhanced Login and Signup Form Styles */
+body {
+    background-color: #f3f4f6; /* Soft background for the form */
+    font-family: Arial, sans-serif;
+}
+body {
+    background-image: url('../images/ls.jpeg'); /* Adjust path if needed */
+    background-size: cover;          /* Ensures the image covers the entire page */
+    background-position: center;     /* Centers the image */
+    background-repeat: no-repeat;    /* Prevents the image from repeating */
+    font-family: Arial, sans-serif;  /* Optional: sets the font style */
+    color: #333;                     /* Optional: sets a default text color */
+}
+
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.form-container {
+    max-width: 500px;
+    margin: 3rem auto;
+    background-color: #ffffff;
+    padding: 3rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.7s ease-out; /* Smooth form entrance */
+    transition: transform 0.3s ease;
+}
+
+.form-container:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #3f51b5;
+    font-weight: 600;
+}
+
+.form-container input, 
+.form-container button {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.25rem;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+.form-container input:focus {
+    border-color: #3f51b5;
+    box-shadow: 0 0 8px rgba(63, 81, 181, 0.2);
+    outline: none;
+}
+
+button {
+    background-color: #0000a0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    background-color: #0000a0;
+    box-shadow: 0 4px 15px rgba(230, 74, 25, 0.4);
+    transform: translateY(-3px); /* Slight upward animation on hover */
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Fade-in animation for smooth form entrance */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive enhancements */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 2rem 1.5rem;
+    }
+
+    .form-container h2 {
+        font-size: 1.6rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+
+
