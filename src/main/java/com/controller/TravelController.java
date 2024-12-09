@@ -3,6 +3,7 @@ package com.controller;
 import java.time.LocalDate;
 
 
+
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
@@ -25,7 +26,6 @@ import com.repository.BookingRepository;
 import com.repository.ContactRepository;
 import com.repository.PasswordResetTokenRepository;
 import com.repository.UserRepository;
-import com.service.CaptchaService;
 import com.service.EmailService;
 
 import jakarta.servlet.http.HttpSession;
@@ -42,9 +42,7 @@ public class TravelController {
     @Autowired
     private EmailService emailService;
 
-    @Autowired
-    private CaptchaService captchaService;
-    
+
     @Autowired
     private ContactRepository contactRepository;
     
@@ -123,14 +121,7 @@ public class TravelController {
     @PostMapping("/index")
     public ModelAndView handleLogin(@RequestParam("username") String username,
                                     @RequestParam("password") String password,
-                                    @RequestParam("g-recaptcha-response") String captchaResponse,
                                     HttpSession session) {
-
-        if (!captchaService.verifyCaptcha(captchaResponse)) {
-            ModelAndView modelAndView = new ModelAndView("index");
-            modelAndView.addObject("error", "Captcha verification failed. Please try again.");
-            return modelAndView;
-        }
 
         User user = userRepository.findByUsername(username);
 
@@ -149,6 +140,7 @@ public class TravelController {
             return modelAndView;
         }
     }
+
 
     @GetMapping("/home")
     public ModelAndView showHomePage() {
