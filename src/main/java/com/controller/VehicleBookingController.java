@@ -54,7 +54,7 @@ public class VehicleBookingController {
         return "payment_scanner"; // Show confirmation page
     }
 
-    @PostMapping("/vehicle/confirmPayment")
+    @PostMapping("/confirmPayment")
     public String confirmPayment(@RequestParam Long bookingId, Model model) {
         // Fetch booking details if needed
         VehicleBooking booking = vehicleBookingRepository.findById(bookingId).orElse(null);

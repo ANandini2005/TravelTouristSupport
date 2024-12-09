@@ -357,7 +357,7 @@ public class TravelController {
         return modelAndView;
     }
     
-    @PostMapping("/confirmPayment")
+    @PostMapping("/travel/confirmPayment")
     public String confirmTravelPayment(@RequestParam Long bookingId, Model model) {
         Booking booking = bookingRepository.findById(bookingId).orElse(null);
 
