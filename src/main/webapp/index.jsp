@@ -17,7 +17,7 @@
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
             
-            <div class="g-recaptcha" data-sitekey="6LfHKG8qAAAAAJmFW8hGLxTRuWWOsT2anWZY5N_l"></div>
+            <div class="g-recaptcha" data-sitekey="6Ldbi5YqAAAAAHw-_iUkQJT7VGkPNDxVzjRIrB3x"></div>
             
             <button type="submit">Login</button>
         </form>
