@@ -9,7 +9,7 @@ import org.springframework.util.MultiValueMap;
 @Service
 public class CaptchaService {
 
-    private static final String SECRET_KEY = "6Ldbi5YqAAAAAJuWi15TtsqZ9DVvpi2XLrnxPTww";
+    private static final String SECRET_KEY = "6LeCjJYqAAAAAG4fl6t6pYbbXAl6OOHxy7Ea6_9I";
     private static final String VERIFY_URL = "https://www.google.com/recaptcha/api/siteverify";
 
     public boolean verifyCaptcha(String captchaResponse) {
