@@ -16,7 +16,12 @@
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
             
- 
+ <!-- Add an option to select login type -->
+            <label for="userType">Login as:</label>
+            <select id="userType" name="userType" required>
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
             
             <button type="submit">Login</button>
         </form>

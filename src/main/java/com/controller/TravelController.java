@@ -121,18 +121,35 @@ public class TravelController {
     @PostMapping("/index")
     public ModelAndView handleLogin(@RequestParam("username") String username,
                                     @RequestParam("password") String password,
+                                    @RequestParam("userType") String userType,
                                     HttpSession session) {
 
+        // Check for default admin credentials and admin option
+        if ("admin".equals(userType) && "admin".equals(username) && "admin".equals(password)) {
+            // Create a mock admin user
+            User adminUser = new User();
+            adminUser.setUsername("admin");
+            adminUser.setRole("admin");
+            session.setAttribute("loggedInUser", adminUser); // Store admin in session
+
+            return new ModelAndView("redirect:/adminDashboard"); // Redirect to admin dashboard
+        }
+
+        // Handle regular user login
         User user = userRepository.findByUsername(username);
 
         if (user != null && user.getPassword().equals(password)) {
             session.setAttribute("loggedInUser", user); // Store user in session
 
-            // Redirect based on role
-            if ("admin".equalsIgnoreCase(user.getRole())) {
+            // Redirect based on role or user type
+            if ("admin".equalsIgnoreCase(user.getRole()) && "admin".equals(userType)) {
                 return new ModelAndView("redirect:/adminDashboard");
-            } else {
+            } else if ("user".equals(userType)) {
                 return new ModelAndView("redirect:/home");
+            } else {
+                ModelAndView modelAndView = new ModelAndView("index");
+                modelAndView.addObject("error", "Invalid user type selected");
+                return modelAndView;
             }
         } else {
             ModelAndView modelAndView = new ModelAndView("index");
@@ -140,6 +157,7 @@ public class TravelController {
             return modelAndView;
         }
     }
+
 
 
     @GetMapping("/home")
